@@ -30,9 +30,9 @@ info.update = function (props) {
     (props ? "<h4>Precinct: "+props.PCTNAME+"</h4>"+
 	"<table><tr><td>Democratic votes: </td><td>"+props.USPRSDFL+"</td></tr>"+
 	"<tr><td>Republican votes: </td><td>"+props.USPRSR+"</td></tr>"+
-	"<tr><td>Total votes: </td><td>"+props.USPRSTOTAL+"</td></tr>"+
-    "<tr><td>latitude and longitude: </td><td>"+props.LATLNG+"</td></tr>"+"</table>" : "Hover over a precinct to see vote counts");
+	"<tr><td>Total votes: </td><td>"+props.USPRSTOTAL+"</td></tr>"+"</table>" : "Hover over a precinct to see vote counts");
 };
+//"<tr><td>latitude and longitude: </td><td>"+props.LATLNG+"</td></tr>"
 
 info.addTo(map);
 
@@ -169,7 +169,7 @@ request.then(function(values){
         console.log('mouse lat/long', eventObject.latlng)
     // Update mouse cordinites with HTML element with event latlng
         
-        document.getElementById("mouseCoordinatesBox").innerHTML = "latlng";
+        document.getElementById("mouseCoordinatesBox").innerHTML = "lat" + eventObject.latlng.lat + "lng" + eventObject.latlng.lng;
         
     }
   	//  - second, register an event listener with the map
