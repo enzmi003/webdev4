@@ -174,6 +174,7 @@ request.then(function(values){
   	//  - second, register an event listener with the map
   	//    (something like map.on(....))
     map.on('mousemove', mapHoverHandler);
+    L.control.mousePosition('latlng').addTo(map)
   	//  - when it doubt use Google
   	//    (something to the effect of "leaflet display mouse coordinates"
   	//    should help)
